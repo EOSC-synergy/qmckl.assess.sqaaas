@@ -15,54 +15,54 @@ sqa_criteria:
     repos:
       github.com/TREX-CoE/qmckl git:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-ruby-bee.sh
-        container: qc.acc_droopy-asparagus-scorpion
+        - /usr/bin/env sh .sqa/script.flimsy-myrtle-squirrel.sh
+        container: qc.acc_sickly-aqua-fish
   QC.Doc:
     repos:
       github.com/TREX-CoE/qmckl find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-wheat-mouse.sh
-        container: qc.doc_nerdy-corn-barracuda
+        - /usr/bin/env sh .sqa/script.nerdy-grey-lobster.sh
+        container: qc.doc_stuffy-viridian-zebu
       github.com/TREX-CoE/qmckl git:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-chartreuse-otter.sh
-        container: qc.doc_sloppy-malachite-deer
+        - /usr/bin/env sh .sqa/script.hilly-pumpkin-labradoodle.sh
+        container: qc.doc_wiggy-auburn-squirt
       github.com/TREX-CoE/qmckl markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-azure-iguana.sh
-        container: qc.doc_wheezy-dandelion-chow
+        - /usr/bin/env sh .sqa/script.cloudy-silver-donkey.sh
+        container: qc.doc_squeaky-olive-hippopotamus
   QC.Lic:
     repos:
       github.com/TREX-CoE/qmckl licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-magenta-cattle.sh
-        container: qc.lic_surly-khaki-corgi
+        - /usr/bin/env sh .sqa/script.sleepy-ecru-bird.sh
+        container: qc.lic_tacky-orange-husky
   QC.Sec:
     repos:
       github.com/TREX-CoE/qmckl bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-denim-sheep.sh
-        container: qc.sec_surly-turquoise-buffalo
+        - /usr/bin/env sh .sqa/script.slimy-olivine-seahorse.sh
+        container: qc.sec_pasty-heliotrope-pig
   QC.Sty:
     repos:
       github.com/TREX-CoE/qmckl flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-cinnamon-hyena.sh
-        container: qc.sty_squeaky-wheat-wolverine
+        - /usr/bin/env sh .sqa/script.randy-carmine-hedgehog.sh
+        container: qc.sty_shaggy-amethyst-moorhen
       github.com/TREX-CoE/qmckl jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-persimmon-abyssinian.sh
-        container: qc.sty_pretty-auburn-bee
+        - /usr/bin/env sh .sqa/script.chewy-grey-sloth.sh
+        container: qc.sty_chummy-corn-gerbil
   QC.Uni:
     repos:
       github.com/TREX-CoE/qmckl pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-zucchini-booby.sh
-        container: qc.uni_tacky-turquoise-cat
+        - /usr/bin/env sh .sqa/script.shaggy-cardinal-monster.sh
+        container: qc.uni_sloppy-thistle-fousek
   QC.Ver:
     repos:
       github.com/TREX-CoE/qmckl get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-jade-barracuda.sh
-        container: qc.ver_bumpy-scarlet-tetra
+        - /usr/bin/env sh .sqa/script.tasty-goldenrod-harrier.sh
+        container: qc.ver_snappy-buff-fossa
 timeout: 5400
