@@ -1,0 +1,68 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/TREX-CoE/qmckl:
+      branch: master
+      repo: https://github.com/TREX-CoE/qmckl
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/TREX-CoE/qmckl git:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-ruby-bee.sh
+        container: qc.acc_droopy-asparagus-scorpion
+  QC.Doc:
+    repos:
+      github.com/TREX-CoE/qmckl find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-wheat-mouse.sh
+        container: qc.doc_nerdy-corn-barracuda
+      github.com/TREX-CoE/qmckl git:
+        commands:
+        - /usr/bin/env sh .sqa/script.chewy-chartreuse-otter.sh
+        container: qc.doc_sloppy-malachite-deer
+      github.com/TREX-CoE/qmckl markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-azure-iguana.sh
+        container: qc.doc_wheezy-dandelion-chow
+  QC.Lic:
+    repos:
+      github.com/TREX-CoE/qmckl licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-magenta-cattle.sh
+        container: qc.lic_surly-khaki-corgi
+  QC.Sec:
+    repos:
+      github.com/TREX-CoE/qmckl bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.wimpy-denim-sheep.sh
+        container: qc.sec_surly-turquoise-buffalo
+  QC.Sty:
+    repos:
+      github.com/TREX-CoE/qmckl flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.chewy-cinnamon-hyena.sh
+        container: qc.sty_squeaky-wheat-wolverine
+      github.com/TREX-CoE/qmckl jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-persimmon-abyssinian.sh
+        container: qc.sty_pretty-auburn-bee
+  QC.Uni:
+    repos:
+      github.com/TREX-CoE/qmckl pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-zucchini-booby.sh
+        container: qc.uni_tacky-turquoise-cat
+  QC.Ver:
+    repos:
+      github.com/TREX-CoE/qmckl get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-jade-barracuda.sh
+        container: qc.ver_bumpy-scarlet-tetra
+timeout: 5400
